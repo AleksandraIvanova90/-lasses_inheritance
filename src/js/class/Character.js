@@ -1,7 +1,6 @@
 
-
 export default class Character {
-    /*eslint no-unused-vars: ["error", { "args": "none" }]*/
+    
     constructor(name, type, health, level, attack, defence) {
         if (typeof name == 'number' || name.length < 2 || name.length > 4) {
             throw new Error("Кол-во символов в name от 2 до 4!")
@@ -11,34 +10,36 @@ export default class Character {
         }
         this.name = name;
         this.type = type;
-        this.health = 100;
-        this.level = 1;
+        this.health = health;
+        this.level = level;
+        this.attack = attack;
+        this.defence = defence;
 
-        switch (type) {
-            case 'Bowman':
-                this.attack = 25;
-                this.defence = 25;
-                break
-            case 'Swordsman':
-                this.attack = 40;
-                this.defence = 10;
-                break
-            case 'Magician':
-                this.attack = 10;
-                this.defence = 40;
-                break
-            case 'Daemon':
-                this.attack = 10;
-                this.defence = 40;
-                break
-            case 'Undead':
-                this.attack = 25;
-                this.defence = 25;
-                break
-            case 'Zombie':
-                this.attack = 40;
-                this.defence = 10;
-                break
-        }
+        // switch (type) {
+        //     case 'Bowman':
+        //         this.attack = 25;
+        //         this.defence = 25;
+        //         break
+        //     case 'Swordsman':
+        //         this.attack = 40;
+        //         this.defence = 10;
+        //         break
+        //     case 'Magician':
+        //         this.attack = 10;
+        //         this.defence = 40;
+        //         break
+        //     case 'Daemon':
+        //         this.attack = 10;
+        //         this.defence = 40;
+        //         break
+        //     case 'Undead':
+        //         this.attack = 25;
+        //         this.defence = 25;
+        //         break
+        //     case 'Zombie':
+        //         this.attack = 40;
+        //         this.defence = 10;
+        //         break
+        // }
     }
 }
